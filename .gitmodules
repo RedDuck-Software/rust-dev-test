@@ -1,3 +1,6 @@
 [submodule "disperse-collect-contract/lib/forge-std"]
 	path = disperse-collect-contract/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "disperse-collect-contract/lib/openzeppelin-contracts"]
+	path = disperse-collect-contract/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
