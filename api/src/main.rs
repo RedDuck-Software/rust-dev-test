@@ -207,10 +207,10 @@ fn encode_collect_eth_function(amount: U256, percents: U256) -> Bytes {
 
 fn encode_collect_erc20_function(token: String, amount: U256, percents: U256) -> Bytes {
     let abi = AbiParser::default()
-        .parse(&["collectETH(address token, uint256 amount, uint256 percents)"])
+        .parse(&["collectERC20(address token, uint256 amount, uint256 percents)"])
         .expect("Failed to parse ABI");
 
-    abi.function("collectETH")
+    abi.function("collectERC20")
         .expect("Function not found")
         .encode_input(&[
             Address::from_str(&token).map(Token::Address).unwrap(),
