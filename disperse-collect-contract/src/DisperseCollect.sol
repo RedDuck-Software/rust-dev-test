@@ -73,11 +73,11 @@ contract DisperseCollect is Ownable, IDisperseCollect {
         for (uint256 i = 0; i < to.length; i++) {
             uint256 amountToSend = _getAmountWithPercents(amounts[i], percents);
 
-            total += amountToSend;
-
             if (address(this).balance < amountToSend) {
                 break;
             }
+
+            total += amountToSend;
 
             _sendETH(to[i], amountToSend);
         }
